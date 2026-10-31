@@ -1,0 +1,12 @@
+InnerCly V137 — Staff Centre and Profile Editor Repair
+
+1. Extract the complete ZIP.
+2. Double-click START_INNERCLY.bat. The launcher checks /api/build for v137 before opening the browser.
+3. Sign in normally. Your existing local database is reused; account records and content are not reset.
+4. Owner access: open the account menu (top-right), then Staff Centre or Roles & Permissions. The same links are also in the left navigation / mobile More menu.
+5. Staff accounts see Staff Centre only when their platform roles are assigned. Ordinary members do not see staff navigation and receive 403 from staff-only APIs.
+6. To edit a profile, open Profile and press Edit Profile, use the camera button to change the picture, or open the top-right account menu and choose Edit profile. Save profile commits to the authenticated account.
+
+V137 fixes the profile bio being dropped during auth normalization, unifies desktop/mobile profile-edit click handling, preserves profile edits if the later feed refresh is unavailable, and makes Owner/staff navigation derive correctly from authoritative role metadata.
+
+The V40 and V80 master backup files are included unchanged.

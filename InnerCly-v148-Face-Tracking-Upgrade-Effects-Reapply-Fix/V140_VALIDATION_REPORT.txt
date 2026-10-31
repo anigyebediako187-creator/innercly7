@@ -1,0 +1,7 @@
+V140 validation report
+
+PASS: Python archive extraction and source patch completed.
+PASS: All 15 inline JavaScript blocks passed `node --check`.
+PASS: v40 and v80 backup files retained unchanged from V139 input archive.
+NOT RUN: Browser camera permission / live MediaPipe inference / photo capture / video
+recording end-to-end tests. These require a real browser camera session.

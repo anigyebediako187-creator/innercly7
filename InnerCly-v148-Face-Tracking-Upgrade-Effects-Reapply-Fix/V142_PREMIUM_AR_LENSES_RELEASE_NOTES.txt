@@ -1,0 +1,29 @@
+InnerCly V142 — Premium AR Lenses Upgrade
+
+Built from the user's working V141 package. This update is scoped to Story camera Premium effects.
+
+Premium Story camera additions:
+- Glam Beauty: softer, brighter live preview and capture with face-aligned cheek colour and subtle lip/eye accents.
+- Studio Makeup: stronger face-aligned blush, lip colour and eyeliner accents.
+- Angel Aura: animated halo and floating sparkle accents attached to the tracked face position.
+- Cyber Glow: glowing face contour and landmark accents.
+- Royal Jewels: a crown aligned to head position and rotation.
+- Puppy AR and Kitty AR: ears and nose positioned from facial landmarks; Puppy tongue responds to the face detector's jaw-open blendshape.
+
+Implementation:
+- Uses the existing MediaPipe Face Landmarker camera pipeline.
+- Enables face blendshape output for mouth-expression response.
+- The same face-lens drawing function is used for the live preview, captured photos, and canvas-recorded videos.
+- Premium AR lens controls are protected by the existing Premium entitlement check.
+- Existing standard filters, standard face stickers, Story recording (up to 3 minutes), uploads, and playback were left in place.
+
+Validation performed:
+- All 15 inline JavaScript blocks passed Node syntax checks.
+- main.py passed Python bytecode compilation.
+- HTML parsed successfully and ZIP integrity was checked after packaging.
+- v40 and v80 master backup files were preserved from the V141 base archive.
+
+Limitations:
+- These are face-tracked 2D/2.5D canvas AR effects, not full volumetric 3D character models or AI identity/appearance transformations.
+- MediaPipe model and runtime still load over the internet when the camera starts.
+- A live physical webcam test was not available in this environment; please test on the target laptop/browser.

@@ -1,0 +1,23 @@
+InnerCly V143 — 3D Animated Character Lenses
+
+Built on the V142 Premium AR Lenses package.
+
+Changes:
+- Added a transparent Three.js WebGL layer to the Story camera.
+- Replaced the flat illustrated Puppy, Kitty, Angel Aura, Cyber Glow and Royal Jewels overlays with procedural 3D character props attached to live face landmarks.
+- Added 3D Warrior, 3D Android and 3D Anime character lenses.
+- Added animated details: puppy tongue reacts to mouth opening, angel wings flap, halo rotates subtly, crown and anime accent animate.
+- Composites the 3D WebGL layer into the Story photo capture and canvas-based recorded video path.
+- Clears the 3D character when switching back to regular sticker lenses.
+- Leaves existing Story capture, upload, playback, regular filters and premium access checks in place.
+
+Runtime requirements:
+- Browser must support WebGL and dynamic ES module imports.
+- Internet access is required to load Three.js from jsDelivr and the existing MediaPipe face-landmark model.
+- These are procedural 3D AR props attached to the user's face, not full-body AI identity replacement or generative AI video transformations.
+
+Validation performed:
+- Python main.py compilation.
+- All 15 inline JavaScript blocks passed Node syntax checks.
+- ZIP integrity check.
+- No live webcam/device test was available in this environment.

@@ -1,0 +1,17 @@
+HOW VERIFIED CREATORS WORK IN INNERCLY
+
+Verified Creators is a private, invite-only space. It is separate from the
+verification badge shown beside an account name.
+
+1. An account can have a verification badge (blue, purple, gold, or green)
+   without automatically being a member of Verified Creators.
+2. The InnerCly Owner controls invitations from the Owner-only Verified
+   Creators invitation controls.
+3. An invited account can open the Verified Creators area, view its private
+   posts, and publish text/photo/video posts there.
+4. The Owner can remove an invitation. When access is removed, the account
+   can no longer open or publish in that private area.
+5. The Owner account can access the area without a separate invitation.
+
+The badges communicate account status/identity; the invitation controls access
+to the private creator community. They are two different systems.

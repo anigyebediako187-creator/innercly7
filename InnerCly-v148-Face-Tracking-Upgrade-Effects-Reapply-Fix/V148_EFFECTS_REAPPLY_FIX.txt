@@ -1,0 +1,24 @@
+INNERCLY 148 — STORY EFFECT RE-APPLY FIX
+
+Package line: V145/V146 face-tracking branch
+
+Changes in this build:
+- Apply the selected colour look directly to the live video element (including WebKit filter styling), rather than relying only on stage CSS classes.
+- Preserve effect state when the camera stream attaches and re-apply it on loadeddata/playing events.
+- Redraw face-lens and 3D preview immediately when the user changes a look or face lens.
+- Clear/reset effect styling correctly when switching between face stickers and Premium lenses.
+- Apply Premium effects directly after membership verification instead of recursively dispatching a synthetic click that re-enters the access gate.
+- Ignore stale asynchronous 3D lens loads if the user selects another lens before loading finishes.
+
+Scope:
+- Only the Story camera/effect code in index.html and the active build identity were changed.
+- The v40 and v80 master backup HTML files are preserved byte-for-byte from the incoming package.
+- Prior ZIPs remain untouched.
+
+Validation:
+- ZIP CRC/integrity check.
+- Python source compilation.
+- Inline JavaScript syntax check (Node.js, when available).
+- Presence checks for direct filter application, media-start reapplication, direct Premium effect invocation, and build identity.
+
+A live camera session cannot be exercised in this environment; the final behaviour still needs confirmation in the user's browser/camera.

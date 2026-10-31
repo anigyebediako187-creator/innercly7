@@ -1,0 +1,23 @@
+INNERCLY V137 — LOCAL SOURCE / LIVE DEPLOYMENT GUIDE
+
+This complete ZIP contains V137 source files and the Windows launcher. Extract
+it to its own folder and use START_INNERCLY.bat for local testing.
+
+To update the hosted service, commit and push the V137 source files to the same
+repository and branch currently connected to your Render service. Do not create
+a new service or database just to apply this update. Preserve the existing
+DATABASE_URL and Render configuration. After deployment, verify /api/build
+reports v137 and test a normal Member and each assigned staff role.
+
+V137 adds the platform-role assignment, role-audit, and technical-issue tables
+using additive startup schema creation. It does not replace existing users,
+posts, chats, Stories, group or Events data. Take a database backup before any
+production schema update.
+
+Security checks to verify after deployment:
+- A normal Member does not see Staff Centre and receives HTTP 403 from
+  /api/staff/overview and other protected staff APIs.
+- Each role sees only the team area assigned to that account.
+- Only @innercly_owner can grant or revoke platform roles.
+- Removing a role denies the corresponding server permissions on the next API
+  request; refresh the affected browser session to update its navigation.

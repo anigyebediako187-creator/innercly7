@@ -1,0 +1,7 @@
+INNERCLY v146 — 3D ANIMATED STORY CHARACTER LENSES
+
+This is a rebuilt package based on the V143 3D character-lens source. The application API, visible build marker, and Windows launcher now all identify this package as v146.
+
+The V143 Story camera 3D character-lens implementation is retained. This build-identity correction does not claim a new rendering engine or a live-device camera test.
+
+Run START_INNERCLY.bat on Windows. Three.js and the existing MediaPipe face-tracking runtime/model load from public CDNs, so an internet connection is required when using the camera effects.

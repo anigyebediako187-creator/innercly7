@@ -1,0 +1,36 @@
+INNERCLY V137 — PLATFORM ROLES QUICK REFERENCE
+
+FOUR PRIVATE TEAMS
+
+EXECUTIVE
+- Administrator: assigned Executive workspace; operational oversight and
+  explicitly listed community capabilities. Cannot assign/revoke platform roles,
+  grant badges, alter Owner controls, or use Owner-only finance controls.
+- Owner: @innercly_owner; all four teams and all platform permissions. Protected.
+
+COMMUNITY & SAFETY
+- Community Manager: manage public community pages and platform events.
+- Senior Moderator: view/resolve reports and escalate serious cases.
+- Moderator: view and resolve reports.
+
+TECHNICAL
+- Developer Lead: technical diagnostics, issue submission/review, QA review.
+- Web Developer: technical diagnostics and issue submission/review.
+- QA Lead: diagnostics, issue submission/review, QA review.
+- QA Tester: diagnostics and issue submission. Cannot review the whole queue.
+
+SUPPORT & CREATORS
+- Support Agent: private team-area access. A ticket queue is not in this build.
+- Creator: Creator Dashboard/analytics. Not a staff moderation or admin role.
+
+ACCESS RULES
+- Only the Owner assigns/revokes platform roles.
+- Users can hold multiple roles. Their visible team areas are derived from those
+  roles; a role in one team does not grant a different team's permissions.
+- Normal Members do not see Staff Centre. Server APIs also enforce each
+  permission and return 403 when access is not granted.
+- Staff permissions are not public profile data. Private messages, password
+  hashes, payment secrets, and database credentials are not exposed to staff.
+- Group-specific roles, verification badges, Premium, and Verified Creators
+  invitations are separate systems.
+- Owner changes are recorded in the platform role audit history.

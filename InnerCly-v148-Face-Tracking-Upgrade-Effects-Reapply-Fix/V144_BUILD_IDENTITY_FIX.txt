@@ -1,0 +1,9 @@
+InnerCly V145 — Build identity and launcher correction
+
+Corrected active build identity in main.py API responses, launch_app.py expected-build checks/cache-busting URL, and index.html title/visible build marker. Historical V137 feature identifiers and release notes are intentionally retained as provenance.
+
+Retained V143 Story camera 3D character implementation and all other application files.
+
+Validation performed in this rebuild: Python bytecode compilation, JavaScript syntax checks for inline scripts, API build-identity source checks, ZIP integrity, and byte-for-byte comparison of V40/V80 master backups against the V143 source archive.
+
+Not performed: live browser camera permission, GPU/WebGL, MediaPipe inference, visual alignment, or end-to-end photo/video capture tests on a physical device.

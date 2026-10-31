@@ -1,0 +1,23 @@
+InnerCly V140 — Real-Time Face-Tracked Story Lenses
+
+Scope: Story camera face lenses only. Existing Stories feed, story saving, upload,
+recording controls, playback, account/profile features, and app layout are retained.
+
+Changes:
+- Adds MediaPipe Face Landmarker browser-side detection when the Story camera opens.
+- Puppy, Kitty, Cool, Crown, Butterfly, Sparkle, Hearts, and Flame lens artwork is
+  positioned from live facial landmarks rather than fixed at the centre of the preview.
+- Draws the selected lens into captured photos and the camera-composited video stream.
+- Tries GPU inference first and falls back to CPU inference when GPU setup fails.
+- Loads the face-tracking JavaScript/WASM and model from their public CDNs; the first
+  camera startup therefore requires an internet connection. Camera capture itself
+  remains available if face tracking cannot load.
+
+Validation performed in this package:
+- All 15 inline JavaScript blocks passed Node.js syntax checking after the changes.
+- Existing v40 and v80 backup files were retained byte-for-byte from the input archive.
+
+Not claimed/tested here:
+- No live webcam/browser end-to-end test was possible in this environment.
+- Actual lens alignment, device performance, and CDN availability must be confirmed
+  by opening the camera in the target browser with camera permission and internet.

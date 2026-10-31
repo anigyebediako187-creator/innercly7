@@ -1,0 +1,27 @@
+INNERCLY V137 — VALIDATION REPORT
+Build: v137
+Scope: Staff Centre access visibility and member profile editor repair
+
+PASSED
+- Python compilation: main.py, launch_app.py, currency_registry.py.
+- JavaScript syntax: all 14 inline script blocks in index.html.
+- Build identity: page title, visible build marker, /api/build, /health, and launcher expect v137.
+- Owner navigation visibility: Owner receives all four staff teams and sees Staff Centre plus Roles & Permissions.
+- Assigned staff visibility: an account assigned QA Tester receives only the Technical team area.
+- Member privacy: an ordinary Member sees neither Staff Centre nor Roles & Permissions.
+- Backend access enforcement: ordinary Member receives HTTP 403 from /api/staff/overview; assigned QA Tester receives HTTP 200 and only the Technical team response.
+- Profile update: ordinary Member can update their own display name, username, and bio through PATCH /api/auth/profile; the saved bio is returned again by GET /api/auth/me.
+- Owner protection: Owner cannot be demoted through platform-role assignment.
+- Account menu now includes role-gated Staff Centre and Owner-only Roles & Permissions shortcuts.
+- Profile editor controls use one delegated click path for the account menu, profile Edit button, and avatar camera control.
+- Profile save submits unchanged avatar data only when needed, shows a saving state, and reports a successful server save independently of background feed refresh.
+- V40 and V80 master backup files remain byte-for-byte identical to the V136 package.
+
+BROWSER TEST LIMITATION
+A full interactive browser session could not be completed in this environment: Chromium navigation to the local app was blocked by the execution environment (ERR_BLOCKED_BY_ADMINISTRATOR). JavaScript syntax and navigation-visibility logic were tested separately. Please still verify the visible controls in a normal local browser after launching V137.
+
+DATA SAFETY
+- The automated API tests used a disposable SQLite database.
+- No production database rows were changed.
+- No account password, role, badge, post, Story, chat, group, or production content data was modified by these tests.
+- V40/V80 master backups were copied unchanged.

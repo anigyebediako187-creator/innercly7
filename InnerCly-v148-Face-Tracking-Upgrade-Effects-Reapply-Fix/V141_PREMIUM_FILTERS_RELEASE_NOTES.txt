@@ -1,0 +1,18 @@
+InnerCly V141 — Premium Story Looks Upgrade
+
+Scope: Story camera visual looks only.
+
+Changes:
+- Glow: brighter luminous highlight bloom with a warm/pink light treatment and soft edge shading.
+- Dreamy: pastel pink/blue color wash with a soft highlight haze.
+- Film: richer contrast, warm film tone, and a cinematic vignette.
+- Portrait: warmer, brighter skin-tone-oriented color grade with gentle edge shading.
+- Premium looks are applied in the live camera preview and composited into captured photos and recorded Story video.
+- Existing Premium access checks remain in place.
+- Existing face-lens rendering and Story camera capture flow remain in place.
+
+Validation:
+- All 15 inline JavaScript blocks passed Node.js syntax checking.
+- Verified Premium treatment calls are present in both photo capture and video recording paths.
+- Archive integrity check performed after packaging.
+- No live webcam/browser end-to-end test was available here; please confirm visual appearance on your device.

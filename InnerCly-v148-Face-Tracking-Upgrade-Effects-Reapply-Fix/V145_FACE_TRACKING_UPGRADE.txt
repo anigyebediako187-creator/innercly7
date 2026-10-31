@@ -1,0 +1,19 @@
+InnerCly V145 — Story Lens Face-Tracking Upgrade
+
+Changes
+- Reworked landmark-to-preview coordinate mapping to account for the actual visible camera rectangle and object-fit cropping.
+- Added adaptive temporal landmark smoothing: stable landmarks are damped to reduce jitter, while quick head movement receives a faster response.
+- Smoothed expression blendshapes and retained a briefly missing face to prevent momentary lens flicker.
+- Increased the face-detection target to approximately 25 fps, balancing responsiveness and performance on modest devices.
+- Improved head yaw, roll and depth response for procedural 3D character lenses.
+- Repositioned Puppy and Kitty accessories around the user's actual facial features; removed the opaque full-head shell so the user's face remains visible.
+- Made the Puppy tongue respond more naturally to jaw opening.
+- Separated preview coordinate mapping from captured-image coordinate mapping so overlays are aligned in both the live preview and saved media.
+- Cropped the rendered 3D overlay to the camera's visible preview region before compositing into captured photos and videos.
+
+Existing Stories flow, camera controls, 3-minute recording cap, app sections, backend and embedded v40/v80 master backup files are retained.
+
+Validation
+- Python compilation and inline JavaScript syntax checks are run for this package.
+- ZIP integrity and embedded v40/v80 backup hashes are checked.
+- Live webcam/device tracking has not been tested in this environment.

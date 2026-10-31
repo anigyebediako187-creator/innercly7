@@ -1,0 +1,24 @@
+INNERCLY V137 — PROFILE EDITING & STAFF ACCESS
+
+STAFF CENTRE ACCESS
+1. Sign in to InnerCly.
+2. Open the account menu in the top-right corner.
+3. Accounts with platform roles will see Staff Centre.
+4. The Owner also sees Roles & Permissions.
+5. The same staff links remain available in the left navigation and mobile More menu.
+6. Staff only see the team areas granted to them. Ordinary Members do not see staff links and cannot open staff APIs.
+
+PROFILE EDITING
+1. Open your own Profile.
+2. Press Edit Profile, or use the camera button to change your profile picture.
+3. You can also open the account menu and select Edit profile.
+4. Change display name, username, bio, or profile picture and press Save profile.
+5. The server confirms the update. Your bio is retained across sign-in and refresh.
+
+V137 FIXES
+- Profile bio is preserved through authentication normalization.
+- Desktop and mobile profile edit entry points share the same delegated handler.
+- Profile updates save independently of the feed refresh, so a temporary feed refresh failure does not misreport the saved profile.
+- Owner/staff navigation is derived from the authenticated Owner role and assigned platform roles, including a fallback when staff_teams is missing from a stale client payload.
+
+This V137 package contains the full project and both unchanged V40/V80 master backups. It does not alter the hosted service until deployed.

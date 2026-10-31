@@ -1,0 +1,24 @@
+INNERCLY V146 — STORY EFFECTS IMMEDIATE-APPLY FIX
+
+Package line: V145 face-tracking build
+
+Change:
+- Kept the Story camera's face-effect preview loop alive while the face tracker initializes.
+- The effects loop now waits for camera frames and the camera session rather than exiting on first open.
+- Both standard lens overlays and Premium lens overlays are painted during the active camera session.
+- The loop is invalidated when face tracking/camera shuts down to avoid stale animation loops.
+
+Scope:
+- The package includes the Stories startup/re-entry and effects immediate-apply fixes from the preceding patched package.
+- The only additional re-versioning is the visible/internal package identity so the launcher, app marker,
+  and API build marker report V146.
+- The v40 and v80 master backup files are preserved byte-for-byte.
+
+Validation performed for this package:
+- ZIP CRC/integrity check.
+- Python compilation of main.py and launch_app.py.
+- JavaScript syntax check of inline scripts when Node.js is available.
+- Verification that the immediate-apply rendering loop is present.
+
+Live camera operation cannot be exercised in this build environment; verify camera permission and tracking
+on the target laptop after launching the package.
